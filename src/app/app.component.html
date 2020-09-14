@@ -1,0 +1,16 @@
+<!-- 自定义结构类型 -->
+<div style="margin: 15px;">
+    <h2>自定义结构指令 appIf</h2>
+    <nz-dropdown [nzTrigger]="'click'">
+      <button nz-button nz-dropdown nzType="primary">选择性别</button>
+      <ul nz-menu>
+          <li (click)="changeShow('man')" nz-menu-item>男</li>
+          <li (click)="changeShow('woman')" nz-menu-item>女</li>
+      </ul>
+    </nz-dropdown>
+
+    <p *appIf="isMan">性别：男</p>
+    <p *appIf="!isMan">性别：女</p>
+</div>
+
+
